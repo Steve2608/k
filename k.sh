@@ -212,16 +212,16 @@ k () {
     typeset -i LARGE_FILE_COLOR=196
     typeset -a SIZELIMITS_TO_COLOR
     SIZELIMITS_TO_COLOR=(
-        1024  46    # <= 1kb
-        2048  82    # <= 2kb
-        3072  118   # <= 3kb
-        5120  154   # <= 5kb
-       10240  190   # <= 10kb
-       20480  226   # <= 20kb
-       40960  220   # <= 40kb
-      102400  214   # <= 100kb
-      262144  208   # <= 0.25mb || 256kb
-      524288  202   # <= 0.5mb || 512kb
+           4096  46    # <= 4KiB
+          32768  82    # <= 32KiB
+         524288  118   # <= 512KiB
+        1048576  154   # <= 1MiB
+        4194304  190   # <= 4MiB
+       33554432  226   # <= 32MiB
+      536870912  220   # <= 512MiB
+     1073741824  214   # <= 1GiB
+     4294967296  208   # <= 4GiB
+    34359738368  202   # <= 32GiB
       )
     typeset -i ANCIENT_TIME_COLOR=236  # > more than 2 years old
     typeset -a FILEAGES_TO_COLOR
