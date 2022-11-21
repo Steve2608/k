@@ -211,18 +211,19 @@ k () {
 
     typeset -i LARGE_FILE_COLOR=196
     typeset -a SIZELIMITS_TO_COLOR
+    # logscale from 8KiB to 16GiB
     SIZELIMITS_TO_COLOR=(
-           4096  46    # <= 4KiB
-          32768  82    # <= 32KiB
-         524288  118   # <= 512KiB
-        1048576  154   # <= 1MiB
-        4194304  190   # <= 4MiB
-       33554432  226   # <= 32MiB
-      536870912  220   # <= 512MiB
-     1073741824  214   # <= 1GiB
-     4294967296  208   # <= 4GiB
-    34359738368  202   # <= 32GiB
-      )
+           8192   46
+          41285   82
+         208064  118
+        1048576  154
+        5284492  190
+       26632170  226
+      134217728  220
+      676414963  214
+     3408917802  208
+    17179869184  202
+    )
     typeset -i ANCIENT_TIME_COLOR=236  # > more than 2 years old
     typeset -a FILEAGES_TO_COLOR
     FILEAGES_TO_COLOR=(
